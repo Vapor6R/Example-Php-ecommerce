@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple PHP eCommerce</title>
+    <link rel="stylesheet" href="3-shop.css">
+    <script src="3-shop.js"></script>
+  </head>
+  <body>
+    <!-- (A) PRODUCTS + SHOPPING CART -->
+    <div id="wrap">
+      <!-- (A1) HEADER -->
+      <div id="head">
+        <div id="iCart">
+          My Cart <span id="cCart">0</span>
+        </div>
+        <div id="iDummy">My Account</div>
+      </div>
+
+      <!-- (A2) PRODUCTS -->
+      <div id="products"></div>
+
+      <!-- (A3) CART ITEMS -->
+      <div id="wCart">
+        <span id="wCartClose" class="button" onclick="document.getElementById('wCart').classList.remove('show')">&#8678;</span>
+        <h2>SHOPPING CART</h2>
+        <div id="cart"></div>
+      </div>
+    </div>
+
+    <!-- (B) CHECKOUT FORM -->
+    <div id="checkout"><form onsubmit="return shop.checkout()">
+      <div id="cgClose" class="button" onclick="shop.togcf(false)">X</div>
+      <label>Name</label>
+      <input type="text" name="name" required value="Jon Doe">
+      <label>Email</label>
+      <input type="email" name="email" required value="jon@doe.com">
+      <input class="button" type="submit" value="Checkout">
+    </form></div>
+  </body>
+</html>
